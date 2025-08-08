@@ -6,7 +6,6 @@
 - Giao diện upload ảnh trực quan.
 - Xem ảnh đã chọn trước khi phát hiện.
 - Dùng model YOLOv8 để detect và hiển thị kết quả.
-- Sau khi bấm Detect, chỉ hiển thị ảnh kết quả (không hiển thị lại ảnh gốc người dùng chọn).
 
 ## Cài đặt
 1. Clone dự án:
