@@ -1,0 +1,12 @@
+body{font-family:Segoe UI,Arial;background:linear-gradient(135deg,#0b1220,#071233);color:#e6eef8;margin:0;padding:28px}
+.container{max-width:900px;margin:auto;background:rgba(255,255,255,0.03);padding:24px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+header h1{color:#38bdf8;margin:0}
+.upload-form{display:flex;gap:12px;align-items:center;margin-top:14px}
+.file-label{background:#38bdf8;padding:8px 12px;border-radius:8px;color:#081024;cursor:pointer}
+#imageUpload{display:none}
+button{background:#10b981;border:0;padding:8px 12px;border-radius:8px;color:white;cursor:pointer}
+.preview-area{margin-top:18px}
+.result-section{margin-top:18px}
+.detection-list{list-style:none;padding:0;margin-top:8px}
+.detection-list li{background:rgba(255,255,255,0.03);padding:8px;border-radius:6px;margin-bottom:8px}
+.error{color:#fecaca;margin-top:8px}

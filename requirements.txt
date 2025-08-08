@@ -1,0 +1,5 @@
+flask>=3.1.1
+ultralytics>=8.3.176
+torch>=2.5.1+cpu
+torchvision>=0.20.1
+opencv-python>=4.5.5.62

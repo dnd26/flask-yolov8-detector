@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YOLOv8 Object Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>YOLOv8 Object Detection</h1>
+      <p>Choose an image to preview it, then press <strong>Detect Objects</strong>.</p>
+    </header>
+
+    {% if error %}
+      <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data" class="upload-form">
+      <input type="file" id="imageUpload" name="image" accept="image/*" onchange="previewImage(event)" required>
+      <label for="imageUpload" class="file-label">Choose image</label>
+      <button type="submit">Detect Objects</button>
+    </form>
+
+    <div class="preview-area">
+      <h3>Selected image</h3>
+      <img id="preview" src="{{ uploaded_image if uploaded_image else '' }}" style="max-width:100%; border-radius:10px; display: {{ 'block' if uploaded_image else 'none' }};" />
+    </div>
+
+    {% if result_image %}
+      <section class="result-section">
+        <h2>Detection Result</h2>
+        <img src="{{ result_image }}" alt="Result" style="max-width:100%; border-radius:10px;" />
+
+        {% if detections and detections|length > 0 %}
+          <ul class="detection-list">
+            {% for d in detections %}
+              <li><strong>{{ d.class }}</strong> — {{ d.conf }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>No objects detected.</p>
+        {% endif %}
+      </section>
+    {% endif %}
+
+    <footer>
+      <p>Powered by <strong>YOLOv8</strong> & Flask</p>
+    </footer>
+  </div>
+
+<script>
+function previewImage(event) {
+    const preview = document.getElementById('preview');
+    preview.src = URL.createObjectURL(event.target.files[0]);
+    preview.style.display = 'block';
+}
+</script>
+</body>
+</html>
