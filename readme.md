@@ -10,15 +10,16 @@
 
 ## Cài đặt
 1. Clone dự án:
-git clone https://github.com/dnd26/flask-yolov8-detector.git  cd flask-yolov8-detector
+- git clone https://github.com/dnd26/flask-yolov8-detector.git
+- cd flask-yolov8-detector
 3. Tạo môi trường ảo và cài dependencies
-python -m venv venv
-source venv/bin/activate   # Trên macOS/Linux
-venv\Scripts\activate      # Trên Windows
-pip install -r requirements.txt
+- python -m venv venv
+- source venv/bin/activate   # Trên macOS/Linux
+- venv\Scripts\activate      # Trên Windows
+- pip install -r requirements.txt
 
 4. Chạy ứng dụng
-python app.py
+- python app.py
 
 5. Truy cập
-http://127.0.0.1:5000
+- http://127.0.0.1:5000
