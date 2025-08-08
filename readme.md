@@ -9,17 +9,19 @@
 - Sau khi bấm Detect, chỉ hiển thị ảnh kết quả (không hiển thị lại ảnh gốc người dùng chọn).
 
 ## Cài đặt
-1. Clone dự án:
+1. Clone dự án:<>
 git clone https://github.com/dnd26/flask-yolov8-detector.git
+
+
 cd flask-yolov8-detector
-2. Tạo môi trường ảo và cài dependencies
+3. Tạo môi trường ảo và cài dependencies
 python -m venv venv
 source venv/bin/activate   # Trên macOS/Linux
 venv\Scripts\activate      # Trên Windows
 pip install -r requirements.txt
 
-3. Chạy ứng dụng
+4. Chạy ứng dụng
 python app.py
 
-4. Truy cập
+5. Truy cập
 http://127.0.0.1:5000
