@@ -11,7 +11,7 @@
 1. Clone dự án:
 - git clone https://github.com/dnd26/flask-yolov8-detector.git
 - cd flask-yolov8-detector
-3. Tạo môi trường ảo và cài dependencies
+2. Tạo môi trường ảo và cài dependencies
 - python -m venv venv
 - source venv/bin/activate   # Trên macOS/Linux
 - venv\Scripts\activate      # Trên Windows
